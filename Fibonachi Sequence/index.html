@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+Fibonacci sequence
+</title>
+</head>
+<body>
+<script type="text/javascript">
+      	function fibonaccisequence() {
+    let terms = prompt("Enter the number of terms in the Fibonacci sequence (less than 100):");
+    terms = parseInt(terms);
+
+    if (isNaN(terms) || terms >= 100 || terms <= 0) {
+        alert("Invalid input. Please enter a valid integer less than 100.");
+        return;
+    }
+
+    let sequence = [0, 1];
+
+    for (let i = 2; i < terms; i++) {
+        sequence.push(sequence[i - 1] + sequence[i - 2]);
+    }
+
+    console.log("Fibonacci Sequence:");
+    console.log(sequence.join(", "));
+}
+
+fibonaccisequence();
+
+      </script>
+</body>
+</html>
